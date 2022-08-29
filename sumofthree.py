@@ -1,6 +1,6 @@
 def getNumber(num, index):
     #Using floor division/integer division to access each digit separately
-    return num // 10**index % 10
+    return num // 10**index % 10 #Divide by 10 to the power of index and then modulus 10 to access the single digit
 
 def calcSum(digits):
     return getNumber(digits, 0) + getNumber(digits, 1) + getNumber(digits, 2)
