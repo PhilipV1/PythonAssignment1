@@ -3,6 +3,7 @@ from math import floor
 import pprint
 
 def createDict(intArray):
+    #using the intArray from calcBills to assign value to matching key
     bills = {
         "1000kr bills": intArray[0],
         "500kr bills": intArray[1],
@@ -34,9 +35,26 @@ def calChange(payment, price):
 
     return 0
 
+def userInput(string):
+    if string == "Price":
+        while True:
+            try:
+                price = float(input("Price: "))
+                return price
+            except ValueError:
+                print("Enter a float!")
+    if string == "Payment":
+        while True:
+            try:
+                payment = float(input("Payment: "))
+                return payment
+            except ValueError:
+                print("Enter a float!")
+    return 0
+
 def main():
-    price = 372.5
-    payment = 4000
+    price = userInput("Price")
+    payment = userInput("Payment")
     change = calChange(payment, price)
 
     print(f"Price: {price}")
