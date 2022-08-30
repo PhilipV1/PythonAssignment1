@@ -35,8 +35,8 @@ def calChange(payment, price):
     return 0
 
 def main():
-    price = 372
-    payment = 358484
+    price = 372.5
+    payment = 4000
     change = calChange(payment, price)
 
     print(f"Price: {price}")
