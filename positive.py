@@ -13,7 +13,7 @@ def userInt():
 
 def classifyInt(num):
     if num == 0:
-        print(f"{num} is zero")
+        print(f"{num} is neither negative or positive")
     elif num > 0:
         print(f"{num} is positive")
     else:
