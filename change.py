@@ -10,7 +10,7 @@ def calcBills(change, billArray):
 
     return billAmount
 
-def calcCoins(change, coinArray):
+def calculateCoins(change, coinArray):
     #Read info in calcBills function
     coinAmount = [0 for i in range(len(coinArray))]
     for index in range(0, len(coinArray), 1):
@@ -21,7 +21,7 @@ def calcCoins(change, coinArray):
 
     return coinAmount
 
-def calcChange(payment, price):
+def calculateChange(payment, price):
     if payment > price:
         return round(payment) - round(price)
 
@@ -52,7 +52,7 @@ def userInput(string):
 def main():
     price = userInput("Price")
     payment = userInput("Payment")
-    change = calcChange(payment, price)
+    change = calculateChange(payment, price)
     coins = [10, 5, 2, 1]
     bills = [1000, 500, 200, 100, 50, 20]
 
@@ -63,7 +63,7 @@ def main():
     #Calculates the amount of bills then calculates the left over change to furhter calculate the amount of coins
     numOfBills = calcBills(change, bills)
     change = calcLeftOver(change, bills, numOfBills)
-    numOfCoins = calcCoins(change, coins)
+    numOfCoins = calculateCoins(change, coins)
 
     for i in range(0, len(bills), 1):
         print(f"{bills[i]}kr bills: {numOfBills[i]}")

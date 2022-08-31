@@ -20,7 +20,7 @@ def main():
     alarmTime = (currentTime + timeToAlarm) % 24
     timeFormat = "{:.2f}".format(alarmTime)
     round(alarmTime, 2)
-    print("The alarm will go off at: " + str(timeFormat))
+    print(f"The alarm will go off at: {timeFormat}")
 
 if __name__ == "__main__":
     main()

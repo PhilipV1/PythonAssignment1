@@ -7,9 +7,10 @@ def calcSum(digits):
 
 def digitError(num):
     if len(num) != 3:
-        print("Number is not three digits! ")
+        print("Number is not three digits")
         return False        
     elif not num.isdigit():
+        print("Input is not a number")
         return False
 
     return True
@@ -21,7 +22,7 @@ def main():
         digitCheck = digitError(digits)
 
     digits = int(digits) 
-    print("Sum of digits: " + str(calcSum(digits))) 
+    print(f"Sum of digits: {calcSum(digits)}" ) 
 
 #Good practise for preventing execution of code in zero indent if imported as a module
 if __name__ == "__main__":
