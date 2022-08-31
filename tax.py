@@ -12,6 +12,7 @@ def calcTax(income):
     firstBracket = 0
     secondBracket = 0
     thirdBracket = 0
+    
     if income < 38000:
         totalTax = income * 0.3
     elif income >= 38000 and income < 50000:
@@ -28,7 +29,7 @@ def calcTax(income):
 
 def main():
     income = userInput()
-    tax = int(calcTax(income))
+    tax = round(calcTax(income))
 
     print(f"Corresponding income tax: {tax}")
 

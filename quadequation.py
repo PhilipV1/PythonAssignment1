@@ -4,6 +4,7 @@ def quadEquation(a, b, c):
     first = 0
     second = 0
     singleSolution = False
+    
     if a == 0 and b != 0:
         print(f"There is one solution, namely {-c/b}")
         singleSolution = True
