@@ -24,14 +24,6 @@ def quadEquation(a, b, c):
 
     else:
         print("There are no solutions")
-
-def checkSingleSolution(a, b, c):
-    if a == 0:
-        return -c/b
-    elif a == 0 and b == 0:
-        return c
-    else:
-        return 0
     
 def userInput(string):
     while True:

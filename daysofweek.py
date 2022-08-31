@@ -1,9 +1,4 @@
 
-
-
-from operator import truediv
-
-
 def userInput(weekArray):
     continueLoop = True
     while continueLoop:
@@ -22,11 +17,6 @@ def checkValidWeekDay(day, week):
             return True
     return False
     
-#def translateDay(day, weekEng, weekSwe):
-
-    
-    
-
 def main():
     weekDayEng = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     weekDictionary = {
