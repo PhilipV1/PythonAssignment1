@@ -1,17 +1,21 @@
 from math import floor
-
+#This function calculates how many bills of each type and then returns an array with
+#the amount of each type of bill
 def calcBills(change, billArray):
-    billAmount = [0 for i in range(len(billArray))]#Initialize all the value of all indices to 0 with the length of billArray
+    #Initialize all the value of all indices to 0 with the length of billArray
+    billAmount = [0 for i in range(len(billArray))]
     for index in range(0, len(billArray), 1):
-        amount = floor(change // billArray[index]) #amount stores how many bills of current type
-        if amount > 0:#Checking if there is a bill of current type
+        #amount stores how many bills of current type
+        amount = floor(change // billArray[index]) 
+        #Checking if there is a bill of current type
+        if amount > 0:
             billAmount[index] = amount
-            change -= billArray[index] * amount#Subtracting the value of the bills to get the remaining change
-
+            #Subtracting the value of the bills to get the remaining change
+            change -= billArray[index] * amount
     return billAmount
 
+#Read info in calcBills
 def calculateCoins(change, coinArray):
-    #Read info in calcBills function
     coinAmount = [0 for i in range(len(coinArray))]
     for index in range(0, len(coinArray), 1):
         amount = floor(change // coinArray[index])
@@ -20,7 +24,7 @@ def calculateCoins(change, coinArray):
             change -= coinArray[index] * amount
 
     return coinAmount
-
+#Calculates the change depending on price and payment
 def calculateChange(payment, price):
     if payment > price:
         return round(payment) - round(price)
@@ -28,11 +32,14 @@ def calculateChange(payment, price):
     return 0
 
 def calcLeftOver(change, billArray, billAmount):
+    #Calculates the left over change after the amount of bills have been calculated
     for i in range(0, len(billArray), 1):
         change -= billArray[i] * billAmount[i]
         
     return change
 
+#Takes a string as a parameter to determine if the user is going to get the Price interface or the payment interface
+#then it checks for type errors
 def userInput(string):
     if string == "Price":
         while True:
