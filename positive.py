@@ -2,6 +2,7 @@
 def userInt():
     retVal = 0
     loopCheck = True
+    #Error handling to get an int input
     while loopCheck:
         try:
             retVal = int(input("Please enter an integer: "))

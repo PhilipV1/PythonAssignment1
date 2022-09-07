@@ -11,11 +11,12 @@ def userInput(string):
 
     return myName
 
+#Returns a string short name in the form of F. M. Last
 def createShortName(first, middle, last):
     return first[0] + ". " + middle[0] + ". " + last
 
-
 def main():
+    #Takes name input and capitalizes the first letter
     firstName = userInput("First").capitalize()
     middleName = userInput("Middle").capitalize()
     lastName = userInput("Last").capitalize()

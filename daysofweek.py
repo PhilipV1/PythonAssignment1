@@ -1,5 +1,6 @@
 
 def userInput(weekArray):
+    #Checks input for a valid weekday, capitalizes the first letter in the input
     continueLoop = True
     while continueLoop:
         weekDay = input("What day would you like to translate? ").capitalize()
@@ -19,6 +20,7 @@ def checkValidWeekDay(day, week):
     
 def main():
     weekDayEng = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    #Using dictionary to map the swedish translation to an english equivalent
     weekDictionary = {
         "Monday": "Måndag",
         "Tuesdag": "Tisdag",
@@ -28,7 +30,7 @@ def main():
         "Saturday": "Lördag",
         "Sunday": "Söndag"
     }
-
+    #Takes the weekday input and then prints the swedish equivalent
     engDay = userInput(weekDayEng)
     print(weekDictionary[engDay])
 

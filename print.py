@@ -6,10 +6,10 @@ def main():
     msgBrack = "|"
     width = len(msg) + 4
     height = 5
-
+    #printing the messages
     print(msg)
     print(msgSplit)
-
+    #printing a dynamic square for every input message
     for y in range(height):
         for x in range(width):
             if((y != 0 and y != height - 1) and (x == 0 or x == width - 1)):

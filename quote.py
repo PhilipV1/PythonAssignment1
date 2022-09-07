@@ -1,5 +1,6 @@
 
 def main():
+    #prints the input fomr the user
     quote = input("Write a one liner: ")
     print("\"" + quote + "\"")
 

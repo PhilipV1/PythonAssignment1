@@ -1,4 +1,5 @@
 def numInput(msg):
+    #Input error handling
     while True:
         try:
             retVal = int(input(msg))
@@ -18,6 +19,7 @@ def main():
     timeToAlarm = numInput(secMsg)
 
     alarmTime = (currentTime + timeToAlarm) % 24
+    #Formats time to xx.xx
     timeFormat = "{:.2f}".format(alarmTime)
     round(alarmTime, 2)
     print(f"The alarm will go off at: {timeFormat}")

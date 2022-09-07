@@ -10,12 +10,19 @@ def userInput(key):
     return retVal
 
 def largest(a, b, c):
+    #Determines which number is largest or if all numbers are equal
     if a == b == c:
-        print("The intergers are all equal")
+        print(f"The numbers are all equal: {a}")
     elif a > b and a > c:
        print(f"Largest number is: {a}")
     elif b > a and b > c:
         print(f"Largest number is: {b}")
+    elif a == b and b > c:
+        print(f"Largest number is: {a}")
+    elif b == c and c > a:
+        print(f"Largest number is: {b}")
+    elif a == c and a > b:
+        print(f"Largest number is: {a}")
     else:
         print(f"Largest number is: {c}")
 
