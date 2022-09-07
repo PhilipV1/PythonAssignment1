@@ -13,7 +13,7 @@ def calcAmount(change, currencyArray):
             change -= currencyArray[index] * amount
     return currencyAmount
 
-#Calculates the change depending on price and payment
+#Calculates the change depending on price and payment and rounds the change to nearest whole number
 def calculateChange(payment, price):
     if payment > price:
         return round(payment) - round(price)
